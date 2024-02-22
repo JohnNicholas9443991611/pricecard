@@ -1,0 +1,47 @@
+/* src/App.css */
+.price-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  background-color: white;
+  text-align: center;
+}
+
+.price {
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+}
+.details{
+  color: black;
+}
+ul {
+  list-style-type: none; /* Removes default bullets */
+  padding-left: 0; /* Removes default padding */
+}
+
+
+/* Flexbox container for the cards */
+.cards-container {
+  display: flex;
+  padding: 50px;
+  border-radius: 20px;
+  gap: 20px;
+  background-color: #1E8FEB;
+  justify-content: center;
+}
+li.details::before {
+  margin-right: 10px; /* Adds some space between the symbol and the text */
+}
+
+li.details {
+  /* Additional styling as needed */
+}
+
+
+
+li.details[available="false"]::before {
+  content: '✗ '; /* Content for unavailable features */
+  color: red; /* Color for unavailable features */
+}
